@@ -1,0 +1,28 @@
+--- a/build/sanitycheck
++++ b/build/sanitycheck
+@@ -9,24 +9,6 @@
+ #   This script is launched at the start of Makefile to detect if
+ #   binfmt_misc was tuned to launch 'MZ' shell scripts under WINE
+ 
+-if [ x`uname -s` != xLinux ]; then
+-  cat <<'EOF' >&2
+-
+-ERROR
+-
+-  Want Linux Build Environment
+-
+-DETAILS
+-
+-  Cosmopolitan builds binaries that run on all major platforms.
+-  You need to compile them on Linux, using any distro you like.
+-  Consider setting up Alpine, Debian, or Ubuntu in a VMWare VM.
+-
+-EOF
+-  kill $1
+-  exit 1
+-fi
+-
+ build/sanitycheck2
+ if [ $? -ne 123 ]; then
+   cat <<'EOF' >&2
+
