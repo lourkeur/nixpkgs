@@ -14693,6 +14693,8 @@ in
   givaro_3 = callPackage ../development/libraries/givaro/3.nix {};
   givaro_3_7 = callPackage ../development/libraries/givaro/3.7.nix {};
 
+  ghc_filesystem = callPackage ../development/libraries/ghc_filesystem {};
+
   ghp-import = with python3Packages; toPythonApplication ghp-import;
 
   ghcid = haskellPackages.ghcid.bin;
@@ -27577,6 +27579,8 @@ in
   bitcoind-knots = callPackage ../applications/blockchains/bitcoin-knots.nix { miniupnpc = miniupnpc_2; };
 
   cgminer = callPackage ../applications/blockchains/cgminer { };
+
+  chia = callPackage ../applications/blockchains/chia { };
 
   clightning = callPackage ../applications/blockchains/clightning.nix { };
 
